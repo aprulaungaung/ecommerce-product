@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>ecommerce-product</title>
+  </head>
+  <body>
+  <div class="front-page">
+
+    <nav class="titlebar">
+      <div  class="check-icon" onClick="mobileSearch()">
+        <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
+      </div>
+
+    <div class="brand">
+      <h2 class="sneaker">Sneaker</h2>
+    </div>
+
+    <ul class="option mobile">
+      <div  class="close-label" onClick="mobileReload()">
+      <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+     </div>
+
+      <li class="item"><a class="item-link" id="1" onClick="createLine()" href="#">Collections</a></li>
+      <li class="item"><a class="item-link" id="2" onClick="createLine()" href="#">Men</a></li>
+      <li class="item"><a class="item-link" id="3" onClick="createLine()" href="#">Women</a></li>
+      <li class="item"><a class="item-link" id="4" onClick="createLine()" href="#">About</a></li>
+      <li class="item"><a class="item-link" id="5" onClick="createLine()" href="#">Contact</a></li>
+    </ul>
+    <div class="checkout">
+      <div class="cart-container" onClick="settle()">
+        <img src="images/icon-cart.svg" class="cart" alt="cart" />
+      </div>
+
+      <div class="human-container">
+
+        <img src="images/image-avatar.png" class="avatar" alt="human">
+
+      </div>
+    </div>
+    <div class="myCart">
+      <p class="cart">Cart</p>
+      <hr>
+      <div class="shopping-bag">
+
+        <div class="itemPurchased"></div>
+        <p class="total"></p>
+        <div class="delete" onClick="deletion()">
+          <img src="" class="delete-icon" alt="delete">
+        </div>
+
+      </div>
+
+
+      <div class="checkout-btn" onClick="restart()"></div>
+    </div>
+    <hr />
+  </nav>
+
+  <!-- display section -->
+  <div class="display">
+
+    <div class="left-window">
+
+      <div class="showcase">
+
+      </div>
+
+      <div class="model">
+
+      </div>
+
+      <div class="cross" onClick="closeCurtain()">
+        <img class="close-btn" src="images/icon-close.svg" alt="cross">
+      </div>
+      <div class="next-container" onClick="slideN()">
+        <img src="images/icon-next.svg" class="next" alt="next">
+      </div>
+
+      <div class="prev-container" onClick="slideP()">
+        <img src="images/icon-previous.svg" class="prev" alt="prev">
+      </div>
+
+      <div class="left-footer">
+        <div class="sub-divL">
+          <img src="images/image-product-1-thumbnail.jpg" id="1" class="product" alt="product">
+        </div>
+        <div class="sub-divL">
+          <img src="images/image-product-2-thumbnail.jpg" id="2" class="product" alt="product">
+        </div>
+        <div class="sub-divL three">
+          <img src="images/image-product-3-thumbnail.jpg" id="3" class="product" alt="product">
+        </div>
+        <div class="sub-divL four">
+          <img src="images/image-product-4-thumbnail.jpg" id="4" class="product" alt="product">
+        </div>
+      </div>
+
+    </div>
+    <div class="right-window">
+      <p class="company">SNEAKER COMPANY</p>
+      <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <h3 class="current">$125.00</h3>
+
+      <div class="right-footer">
+        <div class="sub-divR r1">
+          <div class="minus" onClick="decrease()"><img src="images/icon-minus.svg" alt="minus" /></div>
+          <div class="quantity"></div>
+          <div class="plus" onClick="increase()"><img src="images/icon-plus.svg" alt="plus" /></div>
+        </div>
+        <div class="sub-divR r2" onClick="result()">
+          <img src="images/icon-cart.svg" class="basket" alt="basket">
+          <p class="collect" onClick="showNumber()">Add to cart</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <script src="script.js" charset="utf-8"></script>
+  </body>
+
+  </html>
